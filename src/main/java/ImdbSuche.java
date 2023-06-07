@@ -20,6 +20,8 @@ public class ImdbSuche {
             "FROM actress\n" +
             "WHERE actress.movie_id LIKE '%Blacks%'\n" +
             "LIMIT 5";
+
+
     static final String QUERYActors1 = "SELECT DISTINCT actor.name  \n" +
             "FROM actor\n" +
             "WHERE actor.name LIKE '%Blacks%'\n" +
@@ -27,8 +29,6 @@ public class ImdbSuche {
             "SELECT DISTINCT actress.name\n" +
             "FROM actress\n" +
             "WHERE actress.name LIKE '%Blacks%'\n";
-
-
     static final String QUERYActors2 = "SELECT DISTINCT movie.title\n" +
             "FROM actor\n" +
             "JOIN movie ON actor.movie_id = movie.mid\n" +
@@ -38,10 +38,6 @@ public class ImdbSuche {
             "FROM movie\n" +
             "JOIN actress ON actress.movie_id = movie.mid\n" +
             "WHERE actress.name LIKE '%Blacks%'";
-
-
-
-
     static final String QUERYActors3 = "SELECT actor.name \n" +
             "FROM actor \n" +
             "INNER JOIN (SELECT DISTINCT movie.title\n" +
